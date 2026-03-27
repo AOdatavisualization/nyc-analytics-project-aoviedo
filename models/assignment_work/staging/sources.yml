@@ -89,3 +89,87 @@ sources:
             description: Y coordinate in NY State Plane projection system (NAD 83)
           - name: landmark
             description: Nearby landmark or point of interest
+- name: raw
+    description: Raw data loaded from NYC Open Data
+    database: allysacis9440
+    schema: nyc_open_restaurant_applications_raw_data
+    tables:
+      - name: source_nyc_open_restaurant_apps
+        description: |
+          NYC application request for outdoor restaurant seating
+          One row per restaurant outdoor seating application request.
+        columns:
+          - name: objectid
+            description: Unique ID for the restaurant
+          - name: time_of_submission
+            description: Date and time the request was created
+          - name: seating_interest
+            description: Seating location of the restaurant 
+          - name: postcode
+            description: Restaurant zip code 
+          - name: business_address
+            description: Street address of the restaurant
+          - name: latitude
+            description: Latitude coordindate 
+          - name: longitude
+            description: Longitude coordinate
+          - name: approved_for_roadway_seating
+            description: Approval for road seating of restaurant
+          - name: approved_for_sidewalk_seating
+            description: Approval for sidewalk seating of restaurant
+          - name: bbl
+            description: Borough identifier of restaurant
+          - name: bin
+            description: Building identifier of restaurant
+          - name: borough
+            description: Borough location of restuarant
+          - name: building_number
+            description: Building number of restaurant
+          - name: census_tract
+            description: Census area of restaurant
+          - name: community_board
+            description: Community district of restaurant
+          - name: council_district
+            description: District of restaurant
+          - name: doing_business_as_dba
+            description: Name of restaurant
+          - name: food_service_establishment
+            description: FSE restaurant identifier
+          - name: globalid
+            description: GIS unique identifier
+          - name: healthcompliance_terms
+            description: Compliance agreement submitted for a restaurant
+          - name: landmark_district_or_building
+            description: Landmark of a restuarant
+          - name: landmarkdistrict_terms
+            description: Landmark of a district associated with a restaurant
+          - name: legal_business_name
+            description: Name of a restaurant in filing documentation
+          - name: nta
+            description: Restaurant neighborhood location
+          - name: qualify_alcohol
+            description: Alcohol license for a restaurant
+          - name: restaurant_name
+            description: Restaurant name in application submission
+          - name: roadway_dimensions_area
+            description: Area of a roadway associated with a restaurant
+          - name: roadway_dimensions_length
+            description: Length of roadway associated with a restaurant
+          - name: roadway_dimensions_width
+            description: Width of roadway associated with a restaurant
+          - name: seating_interest_sidewalk
+            description: Interest in sidewalk seating for a restuarant
+          - name: sidewalk_dimensions_area
+            description: Area of sidewalk associated with a restaurant
+          - name: sidewalk_dimensions_length
+            description: Lenth of sidewalk associated with a restaurant
+          - name: sidewalk_dimensions_width
+            description: Width of sidewalk associated with a restaurant
+          - name: sla_license_type
+            description: SLA license type for a restaurant
+          - name: sla_serial_number
+            description: SLA serial number for a restaurant
+          - name: street
+            description: Restaurant street name
+          - name: zip
+            description: Restaurant zip code   
