@@ -7,8 +7,7 @@ WITH all_locations AS (
    UNION DISTINCT
 
    -- Get locations from restaurant applications
-   SELECT DISTINCT
-   SELECT DISTINCT incident_zip AS zip_code, borough
+   SELECT DISTINCT zip AS zip_code, borough
    FROM {{ ref('stg_nyc_open_restaurant_apps') }}
    WHERE borough IS NOT NULL
 ),
@@ -21,4 +20,4 @@ location_dimension AS (
    FROM all_locations
 )
 
-SELECT * FROM location_dimension --TODO replace ??s with what to select. HINT: May be quite simple!
+SELECT * FROM location_dimension --TODO replace ??s with what to select. HINT: May be quite simple
